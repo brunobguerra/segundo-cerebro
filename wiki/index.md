@@ -12,16 +12,20 @@ Este arquivo é o **catálogo orientado a conteúdo** da wiki. O agente deve **a
 
 - [[wiki/sources/matplotlib-storytelling-dados-pt-i|Matplotlib e Storytelling com Dados — Pt. I]] — Matplotlib (hierarquia, pyplot vs OO, mosaico) e ponte com *Storytelling com Dados*.
 - [[wiki/sources/matplotlib-storytelling-dados-pt-ii|Matplotlib e Storytelling com Dados — Pt. II]] — Tutorial OO: queimadas (Kaggle), seis lições, gráfico exploratório vs explanatório, antes/depois e roteiro de slides.
+- [[wiki/sources/teoria-dos-grafos-intro-matriz-lista-adjacencia|Teoria dos grafos — introdução, definições, matriz e lista de adjacência]] — Fundamentos, conexidade, árvores; matriz e lista de adjacência; promessa de DFS/BFS.
 
 ### Conceitos (`wiki/concepts/`)
 
 - [[wiki/concepts/matplotlib]] — Figure / Axes / Axis / Artist; Pyplot vs OO; subplots e `subplot_mosaic`.
 - [[wiki/concepts/storytelling-com-dados]] — Princípios do livro de Cole Nussbaumer e impacto na escolha de visuais.
 - [[wiki/concepts/analise-exploratoria-vs-explanatoria]] — Exploratória (descobrir) vs explanatória (mostrar); decisores e apresentações.
+- [[wiki/concepts/teoria-dos-grafos]] — G=(V,A), direcionado/não direcionado, passeio/caminho/ciclo, grau, conexidade, árvores.
+- [[wiki/concepts/grafos-representacoes]] — Grade 0/1 como intuição; matriz de adjacência vs lista; custos típicos.
 
 ### Entidades (`wiki/entities/`)
 
 - [[wiki/entities/henrique-w-franco]] — Autor do artigo sobre Matplotlib e Storytelling (Medium / Data Hackers); stub.
+- [[wiki/entities/anwar-hermuche]] — Autor do intro a teoria dos grafos (Medium); stub.
 
 ### Explorações (`wiki/explorations/`)
 

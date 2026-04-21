@@ -8,6 +8,12 @@ Formato de cabeçalho (parseável):
 
 ---
 
+## [2026-04-21] ingest | Teoria dos grafos — intro, matriz e lista de adjacência
+
+- Raw: `raw/clippings/Teoria dos Grafos —Introdução, Definições, Matriz e Lista de Adjacência.md`
+- Wiki pages touched: `wiki/sources/teoria-dos-grafos-intro-matriz-lista-adjacencia.md`, `wiki/concepts/teoria-dos-grafos.md`, `wiki/concepts/grafos-representacoes.md`, `wiki/entities/anwar-hermuche.md`, `wiki/overview.md`, `wiki/index.md`, `wiki/log.md`
+- Open questions: parte 2 (DFS/BFS) ainda por ingerir; conferir convenções do teu curso para “caminho” vs repetição de arestas; pequeno lapso A→B vs A→D no texto original.
+
 ## [2026-04-21] ingest | Matplotlib e Storytelling com Dados — Pt. II
 
 - Raw: `raw/clippings/Matplotlib e Storytelling com Dados 1.md`
