@@ -9,7 +9,11 @@
   "accessibility": {
     "highTextContrast": false
   },
-  "knownTags": {},
+  "knownTags": {
+    "ai-engineering": 1,
+    "clippings": 3,
+    "data-science": 2
+  },
   "tagColors": {},
   "_version": 4
 }

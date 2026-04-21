@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "c91bad812ec48c87",
+        "id": "6929be4959aefb31",
         "type": "tabs",
         "children": [
           {
-            "id": "d2babb26799f61fe",
+            "id": "8c0033e699c5412b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "raw/clippings/Matplotlib e Storytelling com Dados.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Matplotlib e Storytelling com Dados"
             }
           }
         ]
@@ -199,8 +213,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "8c40d789fb541379",
+  "active": "8c0033e699c5412b",
   "lastOpenFiles": [
+    "wiki/concepts/storytelling-com-dados.md",
+    "wiki/concepts/matplotlib.md",
+    "wiki/sources/matplotlib-storytelling-dados-pt-i.md",
+    "raw/clippings/Matplotlib e Storytelling com Dados.md",
+    "raw/clippings",
     "tools/__pycache__/wiki_search.cpython-312.pyc",
     "tools/__pycache__",
     "tools/wiki_search.py",
@@ -215,8 +234,6 @@
     "wiki/index.md",
     "wiki",
     "raw/README.md",
-    "raw/assets",
-    "raw",
     "README.md",
     "AGENTS.md",
     "CURSOR_BOOTSTRAP_LLM_WIKI_PROMPT.md",
@@ -234,9 +251,6 @@
     "vault/Menor Controle e Flexibilidade.md",
     "vault/Custos Podem Sair do Controle.md",
     "vault/Vendor Lock-in.md",
-    "vault/Riscos de Segurança e Privacidade.md",
-    "vault/Dependência da Conexão com a Internet.md",
-    "vault/Acesso Limitado e Dificuldade de Colaboração.md",
     "arquivos/k-fold.png",
     "exemplo_delimetadores.png",
     "arquivos/exemplo_exemplos.png",
