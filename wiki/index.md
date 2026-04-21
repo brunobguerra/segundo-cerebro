@@ -4,7 +4,7 @@ Este arquivo é o **catálogo orientado a conteúdo** da wiki. O agente deve **a
 
 ## Visão geral
 
-- [[wiki/overview]] — síntese viva do tópico (criada/atualizada pelo agente conforme fontes entram)
+- [[wiki/overview|overview]] — síntese viva do tópico (criada/atualizada pelo agente conforme fontes entram)
 
 ## Por tipo
 
@@ -16,16 +16,16 @@ Este arquivo é o **catálogo orientado a conteúdo** da wiki. O agente deve **a
 
 ### Conceitos (`wiki/concepts/`)
 
-- [[wiki/concepts/matplotlib]] — Figure / Axes / Axis / Artist; Pyplot vs OO; subplots e `subplot_mosaic`.
-- [[wiki/concepts/storytelling-com-dados]] — Princípios do livro de Cole Nussbaumer e impacto na escolha de visuais.
-- [[wiki/concepts/analise-exploratoria-vs-explanatoria]] — Exploratória (descobrir) vs explanatória (mostrar); decisores e apresentações.
-- [[wiki/concepts/teoria-dos-grafos]] — G=(V,A), direcionado/não direcionado, passeio/caminho/ciclo, grau, conexidade, árvores.
-- [[wiki/concepts/grafos-representacoes]] — Grade 0/1 como intuição; matriz de adjacência vs lista; custos típicos.
+- [[wiki/concepts/matplotlib|matplotlib]] — Figure / Axes / Axis / Artist; Pyplot vs OO; subplots e `subplot_mosaic`.
+- [[wiki/concepts/storytelling-com-dados|storytelling com dados]] — Princípios do livro de Cole Nussbaumer e impacto na escolha de visuais.
+- [[wiki/concepts/analise-exploratoria-vs-explanatoria|exploratória vs explanatória]] — Exploratória (descobrir) vs explanatória (mostrar); decisores e apresentações.
+- [[wiki/concepts/teoria-dos-grafos|teoria dos grafos]] — G=(V,A), direcionado/não direcionado, passeio/caminho/ciclo, grau, conexidade, árvores.
+- [[wiki/concepts/grafos-representacoes|grafos: representações]] — Grade 0/1 como intuição; matriz de adjacência vs lista; custos típicos.
 
 ### Entidades (`wiki/entities/`)
 
-- [[wiki/entities/henrique-w-franco]] — Autor do artigo sobre Matplotlib e Storytelling (Medium / Data Hackers); stub.
-- [[wiki/entities/anwar-hermuche]] — Autor do intro a teoria dos grafos (Medium); stub.
+- [[wiki/entities/henrique-w-franco|Henrique W. Franco]] — Autor do artigo sobre Matplotlib e Storytelling (Medium / Data Hackers); stub.
+- [[wiki/entities/anwar-hermuche|Anwar Hermuche]] — Autor do intro a teoria dos grafos (Medium); stub.
 
 ### Explorações (`wiki/explorations/`)
 
