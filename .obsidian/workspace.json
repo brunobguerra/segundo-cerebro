@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "8cfa6a202851c45e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c91bad812ec48c87",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d2babb26799f61fe",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9a62c16b5646a3c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6884986ec1f9708f",
+        "type": "tabs",
+        "dimension": 72.3963599595551,
+        "children": [
+          {
+            "id": "f3f8965998ff50e2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "fa77edcb9be4a2c3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "prompt",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "d03300bccf8516c7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      },
+      {
+        "id": "566e1705bfea8db6",
+        "type": "tabs",
+        "dimension": 27.603640040444894,
+        "children": [
+          {
+            "id": "8c40d789fb541379",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "984a8cc4b397e344",
+    "type": "split",
+    "children": [
+      {
+        "id": "933bb9a440fb2e83",
+        "type": "tabs",
+        "dimension": 65.21317829457365,
+        "children": [
+          {
+            "id": "f017f7d56650670b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "d29acd279f781e0c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "cb9efa0fa496ec80",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "9f47d5c4780d464b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "42155097e44fe319",
+        "type": "tabs",
+        "dimension": 34.786821705426355,
+        "children": [
+          {
+            "id": "1f98589056b47658",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 350.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Criar nova base": false,
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "omnisearch:Omnisearch": false
+    }
+  },
+  "active": "8c40d789fb541379",
+  "lastOpenFiles": [
+    "tools/__pycache__/wiki_search.cpython-312.pyc",
+    "tools/__pycache__",
+    "tools/wiki_search.py",
+    "tools",
+    "CLAUDE.md",
+    "wiki/explorations",
+    "wiki/entities",
+    "wiki/concepts",
+    "wiki/overview.md",
+    "wiki/sources",
+    "wiki/log.md",
+    "wiki/index.md",
+    "wiki",
+    "raw/README.md",
+    "raw/assets",
+    "raw",
+    "README.md",
+    "AGENTS.md",
+    "CURSOR_BOOTSTRAP_LLM_WIKI_PROMPT.md",
+    "vault/Amostra.md",
+    "vault/Prompt Claro.md",
+    "vault/Engenharia de Prompt.md",
+    "vault/Persona.md",
+    "vault/Contexto.md",
+    "vault/Elementos de um Prompt.md",
+    "vault/Computação em Nuvem.md",
+    "vault/Desvantagens.md",
+    "vault/Quais os problemas tenta resolver.md",
+    "vault/Complexidade de Gerenciamento.md",
+    "vault/Problemas de Latência.md",
+    "vault/Menor Controle e Flexibilidade.md",
+    "vault/Custos Podem Sair do Controle.md",
+    "vault/Vendor Lock-in.md",
+    "vault/Riscos de Segurança e Privacidade.md",
+    "vault/Dependência da Conexão com a Internet.md",
+    "vault/Acesso Limitado e Dificuldade de Colaboração.md",
+    "arquivos/k-fold.png",
+    "exemplo_delimetadores.png",
+    "arquivos/exemplo_exemplos.png",
+    "arquivos/exemplo_publico.png",
+    "arquivos/exemplos_persona.png",
+    "arquivos/indicador_saida.png",
+    "arquivos/dados_entrada.png",
+    "arquivos/instrução.png",
+    "arquivos/contexto.png",
+    "arquivos/exemplo_especificidade.png"
+  ]
+}

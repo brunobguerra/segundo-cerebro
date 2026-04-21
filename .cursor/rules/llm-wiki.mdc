@@ -1,0 +1,16 @@
+---
+description: 
+alwaysApply: true
+---
+
+# segundo-cerebro — wiki rules
+
+- **`raw/` is immutable for the agent:** never edit, rename, move, or delete anything under `raw/` (including `raw/assets/`). Humans add sources; agents only read.
+- **`wiki/` is agent-maintained Markdown (+ Mermaid):** create/update pages, wikilinks, `wiki/overview.md`, `wiki/index.md`, and append `wiki/log.md` per workflow in `CLAUDE.md`.
+- **Domain:** data science & AI engineering research notes from articles/videos.
+- **Bilingual:** pt-BR body; EN for YAML keys, slugs/folders, standard technical terms, verbatim quotes; add “Termos (EN)” gloss when jargon-heavy.
+- **Ingest:** **one new source per pass** unless the user explicitly requests batching. Propose takeaways → **wait for user confirmation** → then write wiki (typically 5–15 files).
+- **Lint:** only when the user asks (contradictions, orphans, missing concepts, stale claims, broken links, next questions).
+- **MVP outputs:** Markdown + Mermaid only; no Marp/matplotlib unless the user asks.
+- **Navigation:** read `wiki/index.md` first for queries; keep it updated after ingests and material explorations.
+- **Schema:** if anything conflicts, follow `CLAUDE.md` as source of truth.
