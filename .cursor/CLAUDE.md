@@ -5,19 +5,64 @@ alwaysApply: true
 
 # CLAUDE.md — LLM-maintained wiki (segundo-cerebro)
 
-This repository is a **Karpathy-style “LLM Knowledge Base”**: curated **immutable** sources under `raw/`, a compounding **Markdown (+ Mermaid) wiki** under `wiki/`, and this file as the **schema** the agent must follow.
+This repository is a **Karpathy-style “LLM Knowledge Base”** with an **Obsidian vault layout (Ana Jords-style A / B / C prefixes)**: curated **human-only** capture under **`A*`**, compounding **Markdown (+ Mermaid)** under **`B*`**, integrations under **`C*`**, plus `.cursor/` as schema. Follow this file.
 
 **Domain:** studying **data science** and **AI engineering** from articles and videos (and related notes).
 
 ---
 
-## Architecture (3 layers)
+## Vault layout (prefix groups)
 
-1. **`raw/`** — source-of-truth documents **added by the human**. Agents **read only**. Never edit, rename, move, or delete files under `raw/` (including `raw/assets/`).
-2. **`wiki/`** — LLM-owned Markdown. The human reads; the agent creates/updates pages, links, indexes, and logs.
+**Human-only for the agent (read sources here; never edit, rename, move, or delete):**
+
+| Prefix | Folder | Role |
+|--------|--------|------|
+| **A** | `A00 Inbox/` | Capturas para ingest (`clippings/`, opcional `permanent/`); entrada bruta |
+| **A** | `A01 Processamento/` | Triagem / notas em preparação |
+| **A** | `A02 Anchor Topics/` | Temas âncora / pilares |
+| **A** | `A03 Banco de imagens/` | Imagens e anexos referenciados pelos `.md` |
+| **A** | `A04 Daily Notes/` | Diário (se usar no mesmo repo) |
+| **A** | `A05 Backlog/` | Fila “para depois” |
+| **C** | `C02 Readwise/` | Export/sync Readwise |
+| **C** | `C03 Books database/` | Notas de livros |
+| **C** | `C05 Excalidraw/` | Desenhos |
+
+**Agent-maintained wiki (Markdown + Mermaid):**
+
+| Prefix | Folder | Role |
+|--------|--------|------|
+| **B** | `B01 Projects/` | Explorações arquivadas (`explorations/`), trabalho com fim |
+| **B** | `B03 Resources/` | `sources/`, `concepts/`, `entities/` |
+| **B** | `B04 Archives/` | Material inativo movido aqui quando fizeres limpeza |
+| **B** | `B05 Systems/` | `overview.md`, `index.md`, `log.md`, `meta/` |
+
+**Ambiente IA (config, não é “wiki”):** `.cursor/` (este arquivo e regras), **`C04 Claude Obsidian/`** (README / ponteiros humanos opcionais), **`B03 Resources/tools/`** (helpers locais).
+
+---
+
+## Architecture (conceptual layers)
+
+1. **Capture (`A*`, parts of `C*`)** — documents **added by the human**. Agents **read only**.
+2. **Wiki (`B01`, `B03`, `B05`; optionally `B04`)** — LLM-owned Markdown where allowed above. The human reads; the agent creates/updates pages, links, indexes, and logs.
 3. **`CLAUDE.md`** (this file) — conventions + workflows. Co-evolve with the human over time.
 
-Optional: **`tools/`** — tiny stdlib helpers (e.g. `wiki_search.py`).
+Optional: **`B03 Resources/tools/`** — tiny stdlib helpers (e.g. `wiki_search.py`).
+
+---
+
+## Three workflows (human vs integrated vs agent tooling)
+
+This vault follows the split discussed in [Ana Jords — segundo cérebro (Obsidian + IA)](https://youtu.be/8NOxb2WV95I): separate **where you author**, **where the AI operates autonomously**, and **where knowledge multiplies under your approval**.
+
+| Workflow | Locations | Human | Agent |
+|----------|-----------|-------|-------|
+| **1 — Autorial / study** | `A00`–`A05` (incl. `A00 Inbox/clippings/`), `C02`/`C03`/`C05` como fontes suas | Escreve, deposita fontes, decide o que vale ingerir | **Somente leitura** nas zonas human-only; não substitui o teu julgamento |
+| **2 — Ambiente da IA** | `.cursor/`, `C04 Claude Obsidian/` (docs), skills Cursor, `B03 Resources/tools/` | Aprova mudanças de schema | Propõe edits em `.cursor/` e `B03 Resources/tools/` quando pedires |
+| **3 — Integrado (multiplicação)** | `B03 Resources/`, `B05 Systems/` (+ `B01 Projects/` quando aplicável) | Confirma takeaways antes do ingest | Autonomia **dentro dos caminhos `B*`** deste schema; **uma fonte nova por ingest** salvo pedido explícito em lote |
+
+**PARA-ish mapping:** *projects/areas* → perguntas em `B05 Systems/overview.md` e `B01 Projects/explorations/`; *resources* → `B03 Resources/`; *archive* → `B04 Archives/` + entradas antigas em `B05 Systems/log.md`; entrada de material → **`A00 Inbox/`** primeiro.
+
+**Trap of accumulation:** volume of notes ≠ insight. Prefer periodic **lint** (on-demand) and human pruning of what deserves to stay linked from `B05 Systems/index.md` and `B05 Systems/overview.md`.
 
 ---
 
@@ -34,28 +79,28 @@ Optional: **`tools/`** — tiny stdlib helpers (e.g. `wiki_search.py`).
 
 | Path | Purpose |
 |------|---------|
-| `wiki/sources/` | One page per ingested source (summary + pointers to raw path) |
-| `wiki/concepts/` | Concept pages (definitions, links, tensions) |
-| `wiki/entities/` | People, orgs, models, datasets — when useful |
-| `wiki/explorations/` | Filed answers / analyses the human wants kept |
-| `wiki/overview.md` | Living synthesis (“what we believe so far”) |
-| `wiki/index.md` | Content catalog (must be updated after ingests / major queries) |
-| `wiki/log.md` | Append-only timeline |
+| `B03 Resources/sources/` | One page per ingested source (summary + pointer to path under `A00 Inbox/clippings/` or equivalent) |
+| `B03 Resources/concepts/` | Concept pages (definitions, links, tensions) |
+| `B03 Resources/entities/` | People, orgs, models, datasets — when useful |
+| `B01 Projects/explorations/` | Filed answers / analyses the human wants kept |
+| `B05 Systems/overview.md` | Living synthesis (“what we believe so far”) |
+| `B05 Systems/index.md` | Content catalog (must be updated after ingests / major queries) |
+| `B05 Systems/log.md` | Append-only timeline |
 
 ---
 
 ## Internal linking (Obsidian-style)
 
-- Use wikilinks: `[[page title]]` or `[[folder/page title]]` **without** `.md` extensions.
+- Use wikilinks: `[[page title]]` or `[[folder/subfolder/page title]]` **without** `.md` extensions (paths may include spaces, e.g. `B03 Resources/concepts/foo`).
 - Prefer **stable note titles** matching the `title` frontmatter field.
 - Every new page should link **up** to concepts and **sideways** to related pages.
-- After adding a source page, update relevant concept pages and `wiki/overview.md` if needed.
+- After adding a source page, update relevant concept pages and `B05 Systems/overview.md` if needed.
 
 ---
 
 ## Frontmatter (required on new wiki pages)
 
-Not required on `wiki/index.md` / `wiki/log.md` unless helpful.
+Not required on `B05 Systems/index.md` / `B05 Systems/log.md` unless helpful.
 
 ```yaml
 ---
@@ -64,7 +109,7 @@ slug: "<ascii-kebab-case>"
 type: source|concept|entity|exploration|overview
 lang: pt-BR
 sources:
-  - "[[...]]"   # wikilinks to source pages and/or notes like `raw/...` in backticks if needed
+  - "[[...]]"   # wikilinks to source pages and/or paths like `A00 Inbox/clippings/...` in backticks if needed
 updated: YYYY-MM-DD
 tags: [data-science, ai-engineering]
 summary: "<one line, pt-BR>"
@@ -78,7 +123,7 @@ summary: "<one line, pt-BR>"
 
 ## Output formats (MVP)
 
-- **Markdown** and **Mermaid** diagrams only inside `wiki/`.
+- **Markdown** and **Mermaid** diagrams under **`B01 Projects/`**, **`B03 Resources/`**, **`B05 Systems/`** (not under `A*` / `C02`–`C05` human zones).
 - Do **not** add Marp, matplotlib pipelines, or mandatory web-search tooling unless the human asks.
 
 ---
@@ -89,25 +134,25 @@ summary: "<one line, pt-BR>"
 
 ### Steps
 
-1. **Locate** the new source the human points to (typically a single file under `raw/`).
+1. **Locate** the new source the human points to (typically a single file under `A00 Inbox/clippings/`).
 2. **Read** it (if images exist, follow up by reading key images separately when needed).
 3. **Propose** to the human: key takeaways, proposed wiki changes (list of pages to create/update), and open questions / uncertainties.
 4. **Wait** for human confirmation on emphasis and scope.
 5. **Write** the wiki updates (often 5–15 files):  
-   - `wiki/sources/<slug>.md`  
-   - update/create `wiki/concepts/*` as needed  
-   - update/create `wiki/entities/*` if useful  
-   - update `wiki/overview.md`  
+   - `B03 Resources/sources/<slug>.md`  
+   - update/create `B03 Resources/concepts/*` as needed  
+   - update/create `B03 Resources/entities/*` if useful  
+   - update `B05 Systems/overview.md`  
    - update backlinks across touched pages  
-   - update `wiki/index.md`  
-   - append `wiki/log.md` with `## [YYYY-MM-DD] ingest | <short title>`
+   - update `B05 Systems/index.md`  
+   - append `B05 Systems/log.md` with `## [YYYY-MM-DD] ingest | <short title>`
 
 ### Log entry template
 
 ```markdown
 ## [2026-04-21] ingest | <short title>
 
-- Raw: `raw/...`
+- Fonte: `A00 Inbox/clippings/...`
 - Wiki pages touched: ...
 - Open questions: ...
 ```
@@ -116,9 +161,9 @@ summary: "<one line, pt-BR>"
 
 ## Workflow: Query / Q&A
 
-1. Use `wiki/index.md` first to find relevant pages; drill into linked notes.
-2. Answer with **citations** to wiki pages (`[[...]]`) and raw paths (`` `raw/...` ``) when appropriate.
-3. If the human wants an answer preserved, create/update a page under `wiki/explorations/` and link it from `wiki/index.md`, then append `wiki/log.md` (`query`).
+1. Use `B05 Systems/index.md` first to find relevant pages; drill into linked notes.
+2. Answer with **citations** to wiki pages (`[[...]]`) and source paths (`` `A00 Inbox/clippings/...` ``) when appropriate.
+3. If the human wants an answer preserved, create/update a page under `B01 Projects/explorations/` and link it from `B05 Systems/index.md`, then append `B05 Systems/log.md` (`query`).
 
 ---
 
@@ -137,7 +182,7 @@ Run only when the human asks.
 - Duplicate coverage (merge plan).
 - Suggest **next questions** and **next sources** to ingest.
 
-Append `wiki/log.md`: `## [YYYY-MM-DD] lint | <one-line summary>` plus bullet findings.
+Append `B05 Systems/log.md`: `## [YYYY-MM-DD] lint | <one-line summary>` plus bullet findings.
 
 ---
 
@@ -148,7 +193,7 @@ Use fenced blocks:
 ````markdown
 ```mermaid
 flowchart LR
-  A[raw] --> B[wiki]
+  A[A00 capture] --> B[B03+B05 wiki]
 ```
 ````
 
@@ -159,10 +204,10 @@ flowchart LR
 From repo root:
 
 ```bash
-python tools/wiki_search.py "<query>"
+python "B03 Resources/tools/wiki_search.py" "<query>"
 ```
 
-Useful when the wiki grows beyond trivial size. Still keep `wiki/index.md` healthy.
+Useful when the wiki grows beyond trivial size. Still keep `B05 Systems/index.md` healthy.
 
 ---
 
@@ -180,4 +225,4 @@ Commit wiki changes in coherent chunks with clear messages. Do not commit large 
 
 ## First action for a new session
 
-If the human says “ingest”, identify **exactly one** new raw file, then follow the ingest workflow. If unclear which file, ask.
+If the human says “ingest”, identify **exactly one** new source file under `A00 Inbox/` (usually `clippings/`), then follow the ingest workflow. If unclear which file, ask.

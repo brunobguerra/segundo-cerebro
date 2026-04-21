@@ -1,31 +1,43 @@
 # segundo-cerebro
 
-Personal **LLM-maintained research wiki** for **data science** and **AI engineering** (articles, papers, videos). Pattern: immutable sources in `raw/`, compounding notes in `wiki/`, Obsidian as the reader.
+Cofre Obsidian/Git com **prefixos A / B / C** (entrada → PARA → integrações), inspirado na organização da [Ana Jords](https://youtu.be/8NOxb2WV95I): **`A*`** captura humana (imutável para o agente), **`B*`** wiki mantida pelo LLM, **`C*`** integrações.
 
 ## Start here
 
-1. Open **`CLAUDE.md`** before using an AI agent in this repo.
-2. Drop new sources under **`raw/`** (see `raw/README.md`). Do not let the agent edit `raw/`.
-3. Ask the agent to **ingest one source at a time**; review takeaways before it writes to `wiki/`.
-4. Browse **`wiki/`** in Obsidian (graph, backlinks).
+1. Abre **`.cursor/CLAUDE.md`** antes de usar um agente neste repo.
+2. Coloca novas fontes em **`A00 Inbox/clippings/`** (ver `A00 Inbox/README.md`). O agente **não edita** pastas **A*** nem **C02/C03/C05**.
+3. Pede **ingest de uma fonte de cada vez**; revê takeaways antes de autorizar escrita em **`B03`** / **`B05`**.
+4. Navega no Obsidian (grafo, backlinks).
 
-## Layout
+## Layout (raiz do vault)
 
-| Path | Role |
-|------|------|
-| `raw/` | Curated sources (you add; agents read-only) |
-| `wiki/` | LLM-written markdown wiki + `index.md` + `log.md` |
-| `tools/` | Small helpers (e.g. local wiki search) |
+| Prefix | Pastas | Função |
+|--------|--------|--------|
+| **A** | `A00 Inbox` … `A05 Backlog` | Captura, processamento, âncoras, imagens, daily, backlog — **só tu editas** |
+| **B** | `B01 Projects`, `B03 Resources`, `B04 Archives`, `B05 Systems` | PARA + sistemas — **wiki do agente** em `B03`/`B05`/`B01` |
+| **C** | `C02 Readwise` … `C05 Excalidraw` | Integrações; **`C04 Claude Obsidian`** = ponteiros / docs locais da IA |
 
-## Wiki search (optional)
+| Destaque | Conteúdo |
+|----------|-----------|
+| `B03 Resources/` | `sources/`, `concepts/`, `entities/` |
+| `B05 Systems/` | `overview.md`, `index.md`, `log.md`, `meta/` |
+| `B03 Resources/tools/` | `wiki_search.py` — pesquisa local nos `.md` da wiki |
 
-From the repository root (Python 3):
+### Três fluxos (vídeo)
+
+1. **Autoral** — pensamento e fontes em **`A*`** (e notas tuas, ex. `A00 Inbox/permanent/`).
+2. **Ambiente da IA** — `.cursor/`, **`C04 Claude Obsidian/`**, skills Cursor.
+3. **Integrado** — ingest com confirmação → síntese em **`B03`/`B05`**. Detalhes: [`B05 Systems/meta/operacao-ia.md`](B05 Systems/meta/operacao-ia.md).
+
+## Wiki search (opcional)
+
+Na raiz do repositório (Python 3):
 
 ```bash
-python tools/wiki_search.py "transformer"
+python "B03 Resources/tools/wiki_search.py" "transformer"
 ```
 
-Prints matching paths and a few lines per hit under `wiki/**/*.md`.
+Lista caminhos e linhas sob **`B01 Projects/`**, **`B03 Resources/`**, **`B05 Systems/`**.
 
 ## Remote
 
