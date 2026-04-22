@@ -3,18 +3,17 @@ date: "{{date:YYYY-MM-DD}}"
 tags:
   - daily
 ---
-## Foco / prioridades
+## Perguntas diárias
+Hoje eu...
 
--
+## Entradas
 
-## Registro
 
--
+## Agenda
 
-## Ligações rápidas
 
--
+## Notas
 
-## Triagem (para depois)
 
-- Itens para `A00 Inbox`, `A05 Backlog` ou perguntas à wiki em `B03` / `B05`.
+## Tarefas
+
